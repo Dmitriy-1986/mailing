@@ -121,7 +121,16 @@
 		clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
 	}
 }
-
+@keyframes glitch-anim-flash {
+	0% { 
+		opacity: 0.2; 
+		transform: translate3d(var(--gap-horizontal), var(--gap-vertical), 0);
+	}
+	33%, 100% { 
+		opacity: 0;
+		transform: translate3d(0,0,0);
+	}
+}
 </style>
 </head>
 <body>
