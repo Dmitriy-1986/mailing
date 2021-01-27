@@ -1,0 +1,58 @@
+<!doctype>
+<html>
+<head>
+<title>
+   GLITCH
+</title>
+<style>
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.glitch::before {
+  /* ... anything needed to make it identical */
+
+  /* variation */
+  left: 2px;
+  text-shadow: -1px 0 red;
+  
+  /* important: opaque background masks the original */
+  background: black;
+}
+.glitch::after {
+  /* ... anything needed to make it identical */
+
+  /* variation */
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  
+  /* important: opaque background masks the original */
+  background: black;
+}
+.glitch::before {
+  clip: rect(44px, 450px, 56px, 0);
+  /*
+    Essentially a box from 0, 44px
+    to 450px, 56px
+  */
+
+  /* clip-path: inset(); needs how far you want to push in from the edges instead */
+}
+</style>
+</head>
+<body>
+
+<div class="glitch" data-text="GLITCH">GLITCH</div>
+
+
+
+</body>
+</html>
