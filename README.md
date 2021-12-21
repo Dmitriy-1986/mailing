@@ -1,1 +1,1 @@
-https://dmitriy-1986.github.io/repo-name-8/
+https://dmitriy-1986.github.io/mailing/
